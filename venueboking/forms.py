@@ -1,17 +1,10 @@
-from django.db import models
-
+from .models import *
+from django import forms
 # Create your models here.
-class Cateringes(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    service = models.CharField(max_length=255)
-    catering_type = models.CharField(max_length=255)
-    price = models.IntegerField()
-    remember_token = models.CharField(max_length=100, blank=True, null=True)
-    created_at = models.DateTimeField(blank=True, null=True)
-    updated_at = models.DateTimeField(blank=True, null=True)
-
+class CateringesForm(forms.ModelForm):
     class Meta:
         db_table = 'cateringes'
+        fields = "__all__"
 
 
 class Decorations(models.Model):

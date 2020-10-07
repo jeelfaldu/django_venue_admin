@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div id="content-header">
+    <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>
+                HOME</a> <a href="#">DECORATIONS</a> <a href="#" class="current"> {% if data %}
+                UPDATE DECORATIONS {% else %}
+                ADD DECORATIONS{% endif %}
+            </a> </div>
+    <h1>DECORATIONS</h1>
+</div>
+<div class="container-fluid">
+    <hr>
+    <div class="row-fluid"></div>
+    <div class="span12">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span> {% if data %}
+                <h5>UPDATE DECORATIONS</h5> {% else %}
+                <h5>ADD DECORATIONS</h5>{% endif %}
+
+            </div>
+            <div class="widget-content nopadding">
+                <form class="form-horizontal" method="post" action="save" name="adddecoration" id="adddecoration" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="control-group">
+                        <label class="control-label">Decoration Type</label>
+                        <div class="controls">
+                            <textarea name="decoration_type" id="decoration_type">{% if data.decoration_type %} {{data.decoration_type}} {% endif %} </textarea>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Price</label>
+                        <div class="controls">
+                            <input type="text" name="price" id="price" value='{% if data.price %} {{data.price}} {% endif %} '>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        {% if data %}
+                        <input type="submit" value="UPDATE DECORATIONS" class="btn btn-success"> {% else %}
+                        <input type="submit" value="Add Decoration" class="btn btn-success"> {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
