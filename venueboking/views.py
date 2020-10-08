@@ -177,10 +177,10 @@ def save(request):
             newdata = Packages.objects.create(venue_id=request.POST.get("venue_id"),package_details=request.POST.get("package_details"),cost=request.POST.get("cost"))
             return redirect(index)
         if request.POST.get("total_amount"):
-            newdata = Payments.objects.create(user_id=request.POST.get("user_id"),total_amount=request.POST.get("total_amount"),pramount_paidice=request.POST.get("amount_paid"),status=request.POST.get("status"))
+            newdata = Payments.objects.create(user_id=request.POST.get("user_id"),total_amount=request.POST.get("total_amount"),amount_paid=request.POST.get("amount_paid"),status=request.POST.get("status"))
             return redirect(index)
         if request.POST.get("venue_name"):
-            newdata = Venues.objects.create(service=request.POST.get("service"),catering_type=request.POST.get("catering_type"),price=request.POST.get("price"))
+            newdata = Venues.objects.create(venue_name=request.POST.get("venue_name"),address=request.POST.get("address"),price=request.POST.get("price"),capacity_of_people=request.POST.get("capacity_of_people"))
             return redirect(index)
        
     

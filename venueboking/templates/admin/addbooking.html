@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div id="content-header">
+    <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>
+            HOME</a> <a href="#">BOOKING</a> <a href="#" class="current"> {% if data %}
+            UPDATE BOOKING {% else %}
+            ADD BOOKING{% endif %}
+        </a> </div>
+    <h1>PACKAGE</h1>
+</div>
+<div class="container-fluid">
+    <hr>
+    <div class="row-fluid"></div>
+    <div class="span12">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span> {% if data %}
+                <h5>UPDATE BOOKING</h5> {% else %}
+                <h5>ADD BOOKING</h5>{% endif %}
+
+            </div>
+            <div class="widget-content nopadding">
+                <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="control-group">
+                        <label class="control-label">UserId</label>
+                        <div class="controls">
+                            <input type="text" name="user_id" id="user_id">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">VenueId</label>
+                        <div class="controls">
+                            <input type="text" name="venue_id" id="venue_id">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Packageid</label>
+                        <div class="controls">
+                            <input type="text" name="package_id" id="package_id">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Booking cost</label>
+                        <div class="controls">
+                            <input type="text" name="booking_cost" id="booking_cost">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">DecorationId</label>
+                        <div class="controls">
+                            <input type="text" name="decoration_id" id="decoration_id">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">CateringesId</label>
+                        <div class="controls">
+                            <input type="text" name="cateringes_id" id="cateringes_id">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Date</label>
+                        <div class="controls">
+                            <input type="date" name="date" id="date">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Time_slot</label>
+                        <div class="controls">
+                            <input type="time" name="time_slot" id="time_slot">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        {% if data %}
+                        <input type="submit" value="UPDATE BOOKING" class="btn btn-success"> {% else %}
+                        <input type="submit" value="ADD BOOKING" class="btn btn-success"> {% endif %}
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

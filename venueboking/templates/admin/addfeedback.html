@@ -2,9 +2,9 @@
 
 <div id="content-header">
     <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>
-            HOME</a> <a href="#">VENUES</a> <a href="#" class="current"> {% if data %}
-            UPDATE VENUES {% else %}
-            ADD VENUES{% endif %}
+            HOME</a> <a href="#">FEEDBACK</a> <a href="#" class="current"> {% if data %}
+            UPDATE FEEDBACK {% else %}
+            ADD FEEDBACK{% endif %}
         </a> </div>
     <h1>PACKAGE</h1>
 </div>
@@ -14,41 +14,41 @@
     <div class="span12">
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span> {% if data %}
-                <h5>UPDATE VENUES</h5> {% else %}
-                <h5>ADD VENUES</h5>{% endif %}
+                <h5>UPDATE FEEDBACK</h5> {% else %}
+                <h5>ADD FEEDBACK</h5>{% endif %}
 
             </div>
             <div class="widget-content nopadding">
                 <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
                     {% csrf_token %}
                     <div class="control-group">
-                        <label class="control-label">Venue Name</label>
+                        <label class="control-label">User id</label>
                         <div class="controls">
-                            <input type="text" name="venue_name" id="venue_name">
+                            <input type="text" name="user_id" id="user_id">
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Address</label>
+                        <label class="control-label">Venue Id</label>
                         <div class="controls">
-                            <textarea name="address" id="address"></textarea>
+                            <input type="text" name="venue_id" id="venue_id">
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Price</label>
+                        <label class="control-label">FeedBack Details</label>
                         <div class="controls">
-                            <input type="text" name="price" id="price">
+                            <input type="text" name="feedback_details" id="feedback_details">
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label">Capacity of People</label>
+                        <label class="control-label">Date</label>
                         <div class="controls">
-                            <input type="text" name="capacity_of_people" id="capacity_of_people">
+                            <input type="date" name="date" id="date">
                         </div>
                     </div>
                     <div class="form-actions">
                         {% if data %}
-                        <input type="submit" value="UPDATE VENUES" class="btn btn-success"> {% else %}
-                        <input type="submit" value="ADD VENUES" class="btn btn-success"> {% endif %}
+                        <input type="submit" value="UPDATE FEEDBACK" class="btn btn-success"> {% else %}
+                        <input type="submit" value="ADD FEEDBACK" class="btn btn-success"> {% endif %}
                     </div>
                 </form>
 
