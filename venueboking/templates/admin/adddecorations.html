@@ -21,6 +21,8 @@
             <div class="widget-content nopadding">
                 <form class="form-horizontal" method="post" action="save" name="adddecoration" id="adddecoration" novalidate="novalidate">
                     {% csrf_token %}
+                    <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
+                    <input type="hidden" name="slug" id="slug" value="decorations"></input>
                     <div class="control-group">
                         <label class="control-label">Decoration Type</label>
                         <div class="controls">

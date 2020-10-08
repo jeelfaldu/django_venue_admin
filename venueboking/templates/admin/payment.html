@@ -2,7 +2,7 @@
 <!--breadcrumbs-->
 <div id="content-header">
     <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>
-          Home</a></div>
+            Home</a></div>
 </div>
 <div class="widget-content nopadding">
     <table id="table_id" class="table table-bordered table-striped display">
@@ -32,6 +32,8 @@
                 <td>{{p.remember_token}}</td>
                 <td>{{p.created_at}}</td>
                 <td>{{p.updated_at}}</td>
+                <td><a href="editdata/{{p.id}}/payment" class="btn btn-success">EDIT</a></td>
+
 
                 <td><a href="deletdata/{{p.id}}/payment" class="btn btn-danger">DELETE</a></td>
             </tr>

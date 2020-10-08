@@ -19,6 +19,8 @@
 
             </div>
             <div class="widget-content nopadding">
+                <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
+                <input type="hidden" name="slug" id="slug" value="package"></input>
                 <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
                     {% csrf_token %}
                     <div class="control-group">

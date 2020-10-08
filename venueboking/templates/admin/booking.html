@@ -9,8 +9,14 @@
         <thead>
             <tr>
                 <th class="odd gradeX">id</th>
-                <th class="odd gradeX">service</th>
-                <th class="odd gradeX">catering_type</th>
+                <th class="odd gradeX">user_id</th>
+                <th class="odd gradeX">venue_id</th>
+                <th class="odd gradeX">package_id</th>
+                <th class="odd gradeX">booking_cost</th>
+                <th class="odd gradeX">decoration_id</th>
+                <th class="odd gradeX">cateringes_id</th>
+                <th class="odd gradeX">date</th>
+                <th class="odd gradeX">time_slot</th>
                 <th class="odd gradeX">remember_token</th>
                 <th class="odd gradeX">created_at</th>
                 <th class="odd gradeX">updated_at</th>
@@ -21,11 +27,19 @@
             {% for p in data%}
             <tr>
                 <td>{{p.id}}</td>
-                <td>{{p.service}}</td>
-                <td>{{p.catering_type}}</td>
+                <td>{{p.user_id}}</td>
+                <td>{{p.venue_id}}</td>
+                <td>{{p.package_id}}</td>
+                <td>{{p.booking_cost}}</td>
+                <td>{{p.decoration_id}}</td>
+                <td>{{p.cateringes_id}}</td>
+                <td>{{p.date}}</td>
+                <td>{{p.time_slot}}</td>
                 <td>{{p.remember_token}}</td>
                 <td>{{p.created_at}}</td>
                 <td>{{p.updated_at}}</td>
+                <td><a href="editdata/{{p.id}}/booking" class="btn btn-success">EDIT</a></td>
+
                 <td><a href="deletdata/{{p.id}}/booking" class="btn btn-danger">DELETE</a></td>
             </tr>
             {% endfor %}

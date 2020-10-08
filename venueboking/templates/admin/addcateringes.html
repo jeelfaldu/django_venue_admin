@@ -15,15 +15,17 @@
                     <h5>ADD CATERING</h5>{% endif %}
                 </div>
                 <div class="widget-content nopadding">
-                    <form class="form-horizontal" method="POST" action="save" name="addcatering" id="addcatering">
+                    <form class="form-horizontal" method="POST" action="{% url 'save' %}" name="addcatering" id="addcatering">
                         {% csrf_token %}
 
-                        <!-- <input name="id" id="id" value="10"></input>
-                        <input name="slug" id="slug" value="catering_type"></input> -->
+                        <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
+                        <input type="hidden" name="slug" id="slug" value="cateringes"></input>
+
                         <div class="control-group">
                             <label class="control-label">Service</label>
+
                             <div class="controls">
-                                <input type="text" name="service" id="service" value=''>{% if data.service %}{{data.service}}{% endif %}</input>
+                                <input type="text" name="service" id="service" value='{% if data.service %}{{data.service}}{% endif %}'></input>
                             </div>
                         </div>
                         <div class="control-group">

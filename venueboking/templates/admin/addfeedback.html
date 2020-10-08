@@ -21,6 +21,8 @@
             <div class="widget-content nopadding">
                 <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
                     {% csrf_token %}
+                    <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
+                    <input type="hidden" name="slug" id="slug" value="feedback"></input>
                     <div class="control-group">
                         <label class="control-label">User id</label>
                         <div class="controls">

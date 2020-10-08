@@ -23,26 +23,25 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('adminlogin', views.adminlogin, name='adminlogin'),
     path('logout_data', views.logout_data, name='logout_data'),
+    ##########################
     path('index.html', views.index, name='index'),
     path('venues.html', views.venues, name='venues'),
-    path('save', views.save, name='save'),
     path('cateringes.html', views.cateringes, name='cateringes'),
-    ############################
-    path('addcateringes.html', views.addcateringes, name='addcateringes'),
-    path('adddecorations.html', views.adddecorations, name='adddecorations'),
-    path('addpackage.html', views.addpackage, name='addpackage'),
-
-    path('addvenues.html', views.addvenues, name='addvenues'),
-    
-    path('addpayment.html', views.addpayment, name='addpayment'),
-    path('addfeedback.html', views.addfeedback, name='addfeedback'),
-    path('addbooking.html', views.addbooking, name='addbooking'),
-    ############################
     path('decorations.html', views.decorations, name='decorations'),
     path('package.html', views.package, name='package'),
     path('payment.html', views.payment, name='payment'),
     path('feedback.html', views.feedback, name='feedback'),
     path('booking.html', views.booking, name='booking'),
+    ############################
+    path('addcateringes.html', views.addcateringes, name='addcateringes'),
+    path('adddecorations.html', views.adddecorations, name='adddecorations'),
+    path('addpackage.html', views.addpackage, name='addpackage'),
+    path('addvenues.html', views.addvenues, name='addvenues'),
+    path('addpayment.html', views.addpayment, name='addpayment'),
+    path('addfeedback.html', views.addfeedback, name='addfeedback'),
+    path('addbooking.html', views.addbooking, name='addbooking'),
+    ############################
+    path('save', views.save, name='save'),
     path('deletdata/<int:did>/<slug:slug>', views.deletdata, name='deletdata'),
     path('editdata/<int:did>/<slug:slug>', views.editdata, name='editdata'),
    

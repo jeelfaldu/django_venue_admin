@@ -146,22 +146,28 @@ def save(request):
     
         # CateringesForm(id = 10).update(data=request.POST)
     # return render(request,"adddecorations.html" )
-    if('slug'== 'venues'):
-        pass
-        #     data=Venues.objects.filter(id = request.POST.get('id')).update(field1 = 2)
-        #     return render(request,"addvenues.html" ,{'data':data})
-        # if(slug== 'decorations'):
-        #     data=Decorations.objects.filter(id = request.POST.get('id')).update(field1 = 2)
-        #     return render(request,"adddecorations.html", {'data':data})
-        # if(slug== 'package'):
-        #     data=Packages.objects.filter(id = request.POST.get('id')).update(field1 = 2)
-        #     return render(request,"addpackage.html", {'data':data})
-        # if(slug== 'payment'):
-        #     data=Payments.objects.filter(id = request.POST.get('id')).update(field1 = 2)
-        #     return render(request,"addpayment.html" ,{'data':data})
-        # if(slug== 'feedback'):
-        #     data=Feedbacks.objects.filter(id = request.POST.get('id')).update(field1 = 2)
-        #     return render(request,"addfeedback.html", {'data':data})
+    print(request.POST)
+    if(request.POST.get('slug')):
+        if(request.POST.get('slug')== 'cateringes'):
+            print(request.POST)
+            Cateringes.objects.filter(id = request.POST.get('id')).update(service=request.POST.get("service"),catering_type=request.POST.get("catering_type"),price=request.POST.get("price"))
+            return redirect(request.POST.get('slug'))
+        if(request.POST.get('slug')== 'venues'):
+            print(request.POST)
+            Venues.objects.filter(id = request.POST.get('id')).update(venue_name=request.POST.get("venue_name"),address=request.POST.get("address"),price=request.POST.get("price"),capacity_of_people=request.POST.get("capacity_of_people"))
+            return redirect(request.POST.get('slug'))
+        if(request.POST.get('slug')== 'decorations'):
+            data=Decorations.objects.filter(id = request.POST.get('id')).update(decoration_type=request.POST.get("decoration_type"),price=request.POST.get("price"))
+            return redirect(request.POST.get('slug'))
+        if(request.POST.get('slug')== 'package'):
+            data=Packages.objects.filter(id = request.POST.get('id')).update(venue_id=request.POST.get("venue_id"),package_details=request.POST.get("package_details"),cost=request.POST.get("cost"))
+            return redirect(request.POST.get('slug'))
+        if(request.POST.get('slug')== 'payment'):
+            data=Payments.objects.filter(id = request.POST.get('id')).update(user_id=request.POST.get("user_id"),total_amount=request.POST.get("total_amount"),amount_paid=request.POST.get("amount_paid"),status=request.POST.get("status"))
+            return redirect(request.POST.get('slug'))
+        if(request.POST.get('slug')== 'feedback'):
+            data=Feedbacks.objects.filter(id = request.POST.get('id')).update(feedback_details=request.POST.get("feedback_details"),catering_type=request.POST.get("catering_type"),price=request.POST.get("price"))
+            return redirect(request.POST.get('slug'))
         
     else:
         if request.POST.get("catering_type"):
@@ -199,7 +205,7 @@ def feedback(request):
 
 def booking(request):
     try:
-        data = Cateringes.objects.all()
+        data = Bookings.objects.all()
     except:
         pass
     return render(request,"booking.html",{'data' : data})
@@ -248,8 +254,12 @@ def editdata(request,did,slug):
     if(slug== 'feedback'):
         data=Feedbacks.objects.get(id=did)
         return render(request,"addfeedback.html", {'data':data})
+    if(slug== 'Bookings'):
+        data=Feedbacks.objects.get(id=did)
+        return render(request,"addbooking.html", {'data':data})
+        
         # delete.delete()
     # if(slug== 'Cateringes'):
     #     delete=Cateringes.objects.get(id=did)
     #     delete.delete()
-    return redirect(slug)
+    return render(request,"index.html")
