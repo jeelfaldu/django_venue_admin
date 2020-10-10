@@ -20,55 +20,56 @@
             </div>
             <div class="widget-content nopadding">
                 <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
-                    {% csrf_token %}
+                    {% csrf_token %}{% if data %}
                     <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
                     <input type="hidden" name="slug" id="slug" value="booking"></input>
+                    {% endif %}
                     <div class="control-group">
                         <label class="control-label">UserId</label>
                         <div class="controls">
-                            <input type="text" name="user_id" id="user_id">
+                            <input type="text" name="user_id" id="user_id" value="{% if data %}{{data.user_id}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">VenueId</label>
                         <div class="controls">
-                            <input type="text" name="venue_id" id="venue_id">
+                            <input type="text" name="venue_id" id="venue_id" value="{% if data %}{{data.venue_id}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Packageid</label>
                         <div class="controls">
-                            <input type="text" name="package_id" id="package_id">
+                            <input type="text" name="package_id" id="package_id" value="{% if data %}{{data.package_id}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Booking cost</label>
                         <div class="controls">
-                            <input type="text" name="booking_cost" id="booking_cost">
+                            <input type="text" name="booking_cost" id="booking_cost" value="{% if data %}{{data.booking_cost}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">DecorationId</label>
                         <div class="controls">
-                            <input type="text" name="decoration_id" id="decoration_id">
+                            <input type="text" name="decoration_id" id="decoration_id" value="{% if data %}{{data.decoration_id}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">CateringesId</label>
                         <div class="controls">
-                            <input type="text" name="cateringes_id" id="cateringes_id">
+                            <input type="text" name="cateringes_id" id="cateringes_id" value="{% if data %}{{data.cateringes_id}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Date</label>
                         <div class="controls">
-                            <input type="date" name="date" id="date">
+                            <input type="date" name="date" id="date" value="{% if data %}{{data.date}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Time_slot</label>
                         <div class="controls">
-                            <input type="time" name="time_slot" id="time_slot">
+                            <input type="time" name="time_slot" id="time_slot" value="{% if data %}{{data.time_slot}}{% endif %}">
                         </div>
                     </div>
                     <div class="form-actions">

@@ -168,6 +168,9 @@ def save(request):
         if(request.POST.get('slug')== 'feedback'):
             data=Feedbacks.objects.filter(id = request.POST.get('id')).update(feedback_details=request.POST.get("feedback_details"),catering_type=request.POST.get("catering_type"),price=request.POST.get("price"))
             return redirect(request.POST.get('slug'))
+        if(request.POST.get('slug')== 'booking'):
+            data=Feedbacks.objects.filter(id = request.POST.get('id')).update(user_id=request.POST.get("user_id"),venue_id=request.POST.get("venue_id"),package_id=request.POST.get("package_id"),booking_cost=request.POST.get("booking_cost"),decoration_id=request.POST.get("decoration_id"),cateringes_id=request.POST.get("cateringes_id"),date=request.POST.get("date"),time_slot=request.POST.get("time_slot"))
+            return redirect(request.POST.get('slug'))
         
     else:
         if request.POST.get("catering_type"):
@@ -187,6 +190,9 @@ def save(request):
             return redirect(index)
         if request.POST.get("venue_name"):
             newdata = Venues.objects.create(venue_name=request.POST.get("venue_name"),address=request.POST.get("address"),price=request.POST.get("price"),capacity_of_people=request.POST.get("capacity_of_people"))
+            return redirect(index)
+        if request.POST.get("booking_cost"):
+            newdata = Venues.objects.create(user_id=request.POST.get("user_id"),venue_id=request.POST.get("venue_id"),package_id=request.POST.get("package_id"),booking_cost=request.POST.get("booking_cost"),decoration_id=request.POST.get("decoration_id"),cateringes_id=request.POST.get("cateringes_id"),date=request.POST.get("date"),time_slot=request.POST.get("time_slot"))
             return redirect(index)
        
     

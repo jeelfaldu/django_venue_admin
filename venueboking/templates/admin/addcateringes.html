@@ -16,11 +16,10 @@
                 </div>
                 <div class="widget-content nopadding">
                     <form class="form-horizontal" method="POST" action="{% url 'save' %}" name="addcatering" id="addcatering">
-                        {% csrf_token %}
-
+                        {% csrf_token %} {% if data %}
                         <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
                         <input type="hidden" name="slug" id="slug" value="cateringes"></input>
-
+                        {% endif %}
                         <div class="control-group">
                             <label class="control-label">Service</label>
 

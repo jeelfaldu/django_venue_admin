@@ -19,10 +19,13 @@
 
             </div>
             <div class="widget-content nopadding">
-                <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
-                <input type="hidden" name="slug" id="slug" value="package"></input>
+
+
                 <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
-                    {% csrf_token %}
+                    {% csrf_token %} {% if data %}
+                    <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
+                    <input type="hidden" name="slug" id="slug" value="package"></input>
+                    {% endif %}
                     <div class="control-group">
                         <label class="control-label">VenueId</label>
                         <div class="controls">
