@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from venueboking import views
+from users import views as uv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login', views.login, name='login'),
-    path('', views.index, name='home'),
+    # path('', views.index, name='home'),
     path('adminlogin', views.adminlogin, name='adminlogin'),
     path('logout_data', views.logout_data, name='logout_data'),
     ##########################
@@ -44,5 +45,20 @@ urlpatterns = [
     path('save', views.save, name='save'),
     path('deletdata/<int:did>/<slug:slug>', views.deletdata, name='deletdata'),
     path('editdata/<int:did>/<slug:slug>', views.editdata, name='editdata'),
+
+
+    ############################## user side #########################
+    path('userLogin',uv.userLogin,name="userLogin"),
+    path('viewvenues',uv.viewvenues,name="viewvenues"),
+    path('viewdecorations',uv.viewdecorations,name="viewdecorations"),
+    path('viewcateringes',uv.viewcateringes,name="viewcateringes"),
+    path('viewpackages',uv.viewpackages,name="viewpackages"),
+    path('userfeedback',uv.userfeedback,name="userfeedback"),
+    path('', uv.index, name='home'),
+    path('Loginuser', uv.Login, name='Loginuser'),
+    path('logout', uv.logout, name='logout'),
+    path('userregister', uv.userregister, name='userregister'),
+    path('newbooking', uv.newbooking, name='newbooking'),
+    path('booking', uv.booking, name='booking'),
    
 ]
