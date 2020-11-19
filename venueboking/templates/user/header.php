@@ -37,6 +37,7 @@
                                     <li><a href="vendor-details-tabbed.html">Vendor Tabbed</a></li>
                                     <li><a href="vendor-profile.html">Vendor Profile</a></li>
                                 </ul> -->
+                            <li> <a href="{% url 'newbooking' %}">New Bookings</a>
                             </li>
                             <li class="dropdown"><a href="#" title="Home" class="animsition-link">Suppliers</a>
                                 <ul>

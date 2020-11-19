@@ -16,7 +16,7 @@
 
 <body>
     <div id="loginbox">
-        <form id="loginform" class="form-vertical" method="POST" action="adminlogin">
+        <form id="loginform" class="form-vertical" method="POST" action="{% url 'adminlogin' %}">
             {% csrf_token %}
             <div class="control-group normal_text">
                 <h3><img src="{% static 'img/logo.png' %}" alt="Logo" /></h3>

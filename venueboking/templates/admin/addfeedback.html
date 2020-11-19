@@ -19,7 +19,7 @@
 
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
+                <form class="form-horizontal" method="post" action="{% url 'save' %}" name="addpackage" id="addpackage" novalidate="novalidate">
                     {% csrf_token %}{% if data %}
                     <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
                     <input type="hidden" name="slug" id="slug" value="feedback"></input>
@@ -27,25 +27,25 @@
                     <div class="control-group">
                         <label class="control-label">User id</label>
                         <div class="controls">
-                            <input type="text" name="user_id" id="user_id">
+                            <input type="text" name="user_id" id="user_id" value="{{data.user_id}}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Venue Id</label>
                         <div class="controls">
-                            <input type="text" name="venue_id" id="venue_id">
+                            <input type="text" name="venue_id" id="venue_id" value="{{data.venue_id}}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">FeedBack Details</label>
                         <div class="controls">
-                            <input type="text" name="feedback_details" id="feedback_details">
+                            <input type="text" name="feedback_details" id="feedback_details" value="{{data.feedback_details}}">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label">Date</label>
                         <div class="controls">
-                            <input type="date" name="date" id="date">
+                            <input type="date" name="date" id="date" value="{{data.date}}">
                         </div>
                     </div>
                     <div class="form-actions">

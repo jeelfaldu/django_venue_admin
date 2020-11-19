@@ -1,7 +1,5 @@
 {% extends '../desing.php' %} {% load static %}{% block usercontent %}
 
-
-
 {% with amount=0 %}
 <div id="content">
   <div id="content-header">

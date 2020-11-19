@@ -21,7 +21,7 @@
             <div class="widget-content nopadding">
 
 
-                <form class="form-horizontal" method="post" action="save" name="addpackage" id="addpackage" novalidate="novalidate">
+                <form class="form-horizontal" method="post"  action="{% url 'save' %}" name="addpackage" id="addpackage" novalidate="novalidate">
                     {% csrf_token %} {% if data %}
                     <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
                     <input type="hidden" name="slug" id="slug" value="package"></input>

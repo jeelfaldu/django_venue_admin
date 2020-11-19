@@ -32,7 +32,8 @@ urlpatterns = [
     path('package.html', views.package, name='package'),
     path('payment.html', views.payment, name='payment'),
     path('feedback.html', views.feedback, name='feedback'),
-    path('booking.html', views.booking, name='booking'),
+    path('booking', views.booking, name='booking'),
+
     ############################
     path('addcateringes.html', views.addcateringes, name='addcateringes'),
     path('adddecorations.html', views.adddecorations, name='adddecorations'),
@@ -59,6 +60,8 @@ urlpatterns = [
     path('logout', uv.logout, name='logout'),
     path('userregister', uv.userregister, name='userregister'),
     path('newbooking', uv.newbooking, name='newbooking'),
-    path('booking', uv.booking, name='booking'),
-   
+    path('userbooking', uv.booking, name='userbooking'),
+    path('userforgotpwd', uv.userpsw, name="userforgotpwd"),
+    path('resetpswd', uv.resetpswd, name="resetpswd"),
+    path('reset', uv.reset, name="reset"),
 ]

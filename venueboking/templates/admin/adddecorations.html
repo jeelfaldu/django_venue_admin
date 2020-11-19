@@ -19,7 +19,7 @@
 
             </div>
             <div class="widget-content nopadding">
-                <form class="form-horizontal" method="post" action="save" name="adddecoration" id="adddecoration" novalidate="novalidate">
+                <form class="form-horizontal" method="post"  action="{% url 'save' %}" name="adddecoration" id="adddecoration" novalidate="novalidate">
                     {% csrf_token %}{% if data %}
                     <input type="hidden" name="id" id="id" value="{{data.id}}"></input>
                     <input type="hidden" name="slug" id="slug" value="decorations"></input>

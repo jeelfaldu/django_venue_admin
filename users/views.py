@@ -113,6 +113,37 @@ def int_or_0(value):
         return 0
 
 
+def userpsw(request):
+    return render(request, './user/forgot.php')
+
+
+def resetpswd(request):
+    useremail = request.POST.get("email")
+    # print(Users.objects.filter(email=request.POST.get("email")).get())
+    if Users.objects.filter(email=request.POST.get("email")).exists():
+        return render(request, './user/resetpswd.php', {
+            'data':
+            Users.objects.filter(email=request.POST.get("email")).get()
+        })
+    else:
+        msg = "Email id not found !!"
+        return render(request, './user/resetpswd.php', {
+            'email': useremail,
+            "msg": msg
+        })
+
+
+def reset(request):
+    id = request.POST.get("id")
+    newpswd = request.POST.get("newpswd")
+    data = Users.objects.filter(id=id).update(password=newpswd)
+    if (data == 1):
+        msg = "Password reset succesfully"
+    else:
+        msg = "something went wrong."
+    return render(request, './user/loginregister.php', {msg: msg})
+
+
 def booking(request):
     # data = json.decoder(request.POST.get('package_id'))
     # console.log(data)
