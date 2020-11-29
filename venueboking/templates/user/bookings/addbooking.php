@@ -15,13 +15,14 @@
             <h5>ADD BOOKING</h5>
           </div>
           <div class="widget-content nopadding">
-            <form class="form-horizontal" method="post" action="booking" name="addbooking" id="addbooking" novalidate="novalidate">
+                <!-- {{msg}} -->
+            <form class="form-horizontal" method="post" action="{% url 'userbooking'%}" name="addbooking" id="addbooking" novalidate="novalidate">
               {% csrf_token %}
               <!-- Text input -->
               <div class="control-group">
-                <label class="control-label">User Id <span class="required">*</span></label>
+                <!-- <label class="control-label">User Id <span class="required">*</span></label> -->
                 <div class="controls">
-                  <input type="text" name="user_id" id="user_id" placeholder="User Id" class="form-control input-md" required>
+                  <input type="hidden" name="user_id" id="user_id" placeholder="User Id" class="form-control input-md" value="{{request.session.id}}">
                 </div>
               </div>
               <!-- Text input -->

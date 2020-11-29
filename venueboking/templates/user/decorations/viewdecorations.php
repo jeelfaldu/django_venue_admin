@@ -36,13 +36,13 @@
                 </tr>
               </thead>
               <tbody>
-              {% for decoration in decorations %}
-              	
+                {% for decoration in decorations %}
+
                 <tr class="gradeX">
-                  <td>{{ decorations.id }}</td>
-                  <td>{{ decorations.decoration_type }}</td>
-                  <td>{{ decorations.price }}</td>
-                </tr>                
+                  <td>{{ decoration.id }}</td>
+                  <td>{{ decoration.decoration_type }}</td>
+                  <td>{{ decoration.price }}</td>
+                </tr>
                 {% endfor %}
               </tbody>
             </table>

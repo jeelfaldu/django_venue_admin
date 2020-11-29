@@ -3,17 +3,18 @@
 <div id="content-header">
     <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i>
           Home</a></div>
+        <h4>User Contact</h4>
 </div>
 <div class="widget-content nopadding">
     <table id="table_id" class="table table-bordered table-striped display">
         <thead>
             <tr>
                 <th class="odd gradeX">id</th>
-                <th class="odd gradeX">service</th>
-                <th class="odd gradeX">catering_type</th>
-                <th class="odd gradeX">remember_token</th>
-                <th class="odd gradeX">created_at</th>
-                <th class="odd gradeX">updated_at</th>
+                <th class="odd gradeX">Name</th>
+                <th class="odd gradeX">Email</th>
+                <th class="odd gradeX">Number</th>
+                <th class="odd gradeX">Massage</th>
+                <!-- <th class="odd gradeX">updated_at</th> -->
                 <th class="odd gradeX">Action</th>
             </tr>
         </thead>
@@ -21,17 +22,17 @@
             {% for p in data%}
             <tr>
                 <td>{{p.id}}</td>
-                <td contenteditable="true">{{p.service}}</td>
-                <td>{{p.catering_type}}</td>
-                <td>{{p.remember_token}}</td>
-                <td>{{p.created_at}}</td>
-                <td>{{p.updated_at}} </td>
-                <td><a href="editdata/{{p.id}}/cateringes" class="btn btn-success">EDIT</a></td>
-                <td><a href="deletdata/{{p.id}}/cateringes" class="btn btn-danger">DELETE</a></td>
+                <td>{{p.fname}} {{p.lanme}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.number}}</td>
+                <td>{{p.msg}}</td>
+                <!-- <td>{{p.updated_at}} </td> -->
+                <!-- <td><a href="editdata/{{p.id}}/cateringes" class="btn btn-success">EDIT</a></td> -->
+                <td><a href="deletdata/{{p.id}}/index" class="btn btn-danger">DELETE</a></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
 
-{% endblock %}
+{% endblock %} 

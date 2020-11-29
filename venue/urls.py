@@ -5,6 +5,7 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 Examples:
 Function views
     1. Add an import:  from my_app import views
+
     2. Add a URL to urlpatterns:  path('', views.home, name='home')
 Class-based views
     1. Add an import:  from other_app.views import Home
@@ -19,7 +20,7 @@ from venueboking import views
 from users import views as uv
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('login', views.login, name='login'),
     # path('', views.index, name='home'),
     path('adminlogin', views.adminlogin, name='adminlogin'),
@@ -47,14 +48,14 @@ urlpatterns = [
     path('deletdata/<int:did>/<slug:slug>', views.deletdata, name='deletdata'),
     path('editdata/<int:did>/<slug:slug>', views.editdata, name='editdata'),
 
-
     ############################## user side #########################
-    path('userLogin',uv.userLogin,name="userLogin"),
-    path('viewvenues',uv.viewvenues,name="viewvenues"),
-    path('viewdecorations',uv.viewdecorations,name="viewdecorations"),
-    path('viewcateringes',uv.viewcateringes,name="viewcateringes"),
-    path('viewpackages',uv.viewpackages,name="viewpackages"),
-    path('userfeedback',uv.userfeedback,name="userfeedback"),
+    path('userLogin', uv.userLogin, name="userLogin"),
+    path('viewvenues', uv.viewvenues, name="viewvenues"),
+    path('viewdecorations', uv.viewdecorations, name="viewdecorations"),
+    path('viewcateringes', uv.viewcateringes, name="viewcateringes"),
+    path('viewpackages', uv.viewpackages, name="viewpackages"),
+    path('userfeedback', uv.userfeedback, name="userfeedback"),
+    path('newFeedback', uv.newFeedback, name="newFeedback"),
     path('', uv.index, name='home'),
     path('Loginuser', uv.Login, name='Loginuser'),
     path('logout', uv.logout, name='logout'),
@@ -64,4 +65,9 @@ urlpatterns = [
     path('userforgotpwd', uv.userpsw, name="userforgotpwd"),
     path('resetpswd', uv.resetpswd, name="resetpswd"),
     path('reset', uv.reset, name="reset"),
+    path('receipt/<int:rid>', uv.receipt, name="receipt"),
+    path('mybooking', uv.mybooking, name="mybooking"),
+    path('send_email', uv.send_email, name="send_email"),
+    path('contactus', uv.contactus, name="contactus"),
+    path('savecontacts', uv.savecontacts, name="savecontacts"),
 ]

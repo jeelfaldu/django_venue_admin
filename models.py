@@ -257,3 +257,15 @@ class Venues(models.Model):
     class Meta:
         managed = False
         db_table = 'venues'
+
+
+class Contects(models.Model):
+    fname = models.TextField()
+    lname = models.TextField()
+    email = models.TextField()
+    number = models.TextField()
+    msg = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'contects'

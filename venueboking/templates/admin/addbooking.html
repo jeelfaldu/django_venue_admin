@@ -16,9 +16,11 @@
             <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span> {% if data %}
                 <h5>UPDATE BOOKING</h5> {% else %}
                 <h5>ADD BOOKING</h5>{% endif %}
-
+                
             </div>
+            
             <div class="widget-content nopadding">
+                
                 <form class="form-horizontal" method="post" action="{% url 'save' %}" name="addpackage" id="addpackage"
                     novalidate="novalidate">
                     {% csrf_token %}{% if data %}
@@ -28,8 +30,7 @@
                     <div class="control-group">
                         <label class="control-label">UserId</label>
                         <div class="controls">
-                            <input type="text" name="user_id" id="user_id"
-                                value="{% if data %}{{data.user_id}}{% endif %}">
+                            <input type="" name="user_id" id="user_id" value="{% if data %}{{data.user_id}}{% endif %}">
                         </div>
                     </div>
                     <div class="control-group">

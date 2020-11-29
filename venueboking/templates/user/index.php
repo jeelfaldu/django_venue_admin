@@ -11,6 +11,11 @@
                 </div>
             </div>
         </div>
+        {% if msg %}<script>
+            
+            alert("{{ msg }}")
+        
+        </script> {% endif %}
         <div class="row">
             <!-- feature center -->
             <div class="col-md-4">
@@ -97,9 +102,9 @@
                         <!-- vendor details -->
                         <div class="caption">
                             <!-- caption -->
-                            
+
                             <h2><a href="#" class="title"> Wedding Dress Vendor Title</a></h2>
-                           
+
                             <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <span class="rating-count">(3)</span> </div>
                         </div>
                         <!-- /.caption -->
@@ -196,7 +201,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 tp-testimonial">
+            <div class="col-md-1 2 tp-testimonial">
+
                 <div id="testimonial" class="owl-carousel owl-theme">
                     <div class="item testimonial-block">
                         <div class="couple-pic"><img src="{% static 'front_images/couple.jpg' %}" alt="" class="img-circle"></div>

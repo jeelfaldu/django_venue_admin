@@ -16,8 +16,7 @@ def adminlogin(request):
         print(username, password)
         if Users.objects.filter(email=username, password=password).exists():
             request.session['admin_username'] = username
-
-            return redirect('index')
+            return redirect(index)
         else:
             print("not login")
     return render(request, 'login.html')
@@ -35,7 +34,7 @@ def logout_data(request):
 def index(request):
     if request.session.has_key('admin_username'):
         try:
-            data = Cateringes.objects.all()
+            data = Contects.objects.all()
         except:
             pass
         return render(request, "index.html", {'data': data})
@@ -213,7 +212,7 @@ def save(request):
                 cateringes_id=request.POST.get("cateringes_id"),
                 date=request.POST.get("date"),
                 time_slot=request.POST.get("time_slot"))
-            return redirect("booking.html")
+            return redirect("booking")
 
     else:
         if request.POST.get("catering_type"):
@@ -245,7 +244,8 @@ def save(request):
                 user_id=request.POST.get("user_id"),
                 total_amount=request.POST.get("total_amount"),
                 amount_paid=request.POST.get("amount_paid"),
-                status=request.POST.get("status"))
+                status=request.POST.get("status"),
+                date=request.POST.get("date"))
             return redirect(index)
         if request.POST.get("venue_name"):
             newdata = Venues.objects.create(
@@ -311,6 +311,9 @@ def deletdata(request, did, slug):
         delete.delete()
     if (slug == 'booking'):
         delete = Bookings.objects.get(id=did)
+        delete.delete()
+    if(slug == 'index'):
+        delete = Contects.objects.get(id=did)
         delete.delete()
     # if(slug== 'Cateringes'):
     #     delete=Cateringes.objects.get(id=did)

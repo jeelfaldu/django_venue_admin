@@ -81,7 +81,7 @@ class Bookings(models.Model):
     package = models.ForeignKey('Packages', models.DO_NOTHING)
     booking_cost = models.IntegerField()
     decoration = models.ForeignKey('Decorations', models.DO_NOTHING)
-    cateringes_id = models.PositiveBigIntegerField()
+    cateringes_id = models.IntegerField()
     date = models.DateField()
     time_slot = models.TimeField()
     remember_token = models.CharField(max_length=100, blank=True, null=True)
@@ -135,7 +135,7 @@ class Cateringes(models.Model):
     class Meta:
         managed = False
         db_table = 'cateringes'
-        
+
 class DjangoContentType(models.Model):
     app_label = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
@@ -259,3 +259,16 @@ class Venues(models.Model):
     class Meta:
         managed = False
         db_table = 'venues'
+
+
+class Contects(models.Model):
+    # id = models.BigAutoField(primary_key=True)
+    fname = models.TextField()
+    lname = models.TextField()
+    email = models.TextField()
+    number = models.IntegerField()
+    msg = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'contects'

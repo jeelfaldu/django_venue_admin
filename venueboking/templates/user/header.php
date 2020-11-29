@@ -1,23 +1,23 @@
 {% load static %}
 <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 logo">
-                    <div class="navbar-brand">
-                        <a href="index.html"><img src="{% static 'front_images/logo.png' %}" alt="Wedding Vendors" class="img-responsive"></a>
-                    </div>
-                </div>	
-                <div class="col-md-9">
-                    <div class="navigation " id="navigation">
-                         
-                        <ul class=" ">
-                            <!-- <li class="active"><a href="index.html">Home</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 logo">
+                <div class="navbar-brand">
+                    <a href="index.html"><img src="{% static 'front_images/logo.png' %}" alt="Wedding Vendors" class="img-responsive"></a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="navigation " id="navigation">
+
+                    <ul class=" ">
+                        <!-- <li class="active"><a href="index.html">Home</a>
                                 <ul>
                                     <li><a href="index.html" title="Home" class="animsition-link">Home</a></li>
                                     <li><a href="index-2.html" title="Home v.2" class="animsition-link">Home v.2</a></li>
                                 </ul>
                             </li> -->
-                            <!-- <li><a href="#">Listing</a>
+                        <!-- <li><a href="#">Listing</a>
                                 <ul>
                                     <li><a href="vendor-listing-row-map.html" title="Home" class="animsition-link">List / Half Map</a></li>
                                     <li><a href="vendor-detailsr-listing-sidebar.html" title="Home" class="animsition-link">List / Sidebar Left</a></li>
@@ -31,38 +31,39 @@
                                     <li><a href="vendor-listing-ocean.html">Ocean Style Listing</a></li>
                                 </ul>
                             </li> -->
-                            <!-- <li><a href="vendor-details.html">Vendor</a>
+                        <!-- <li><a href="vendor-details.html">Vendor</a>
                                 <ul>
                                     <li><a href="vendor-details.html">Vendor Simple</a></li>
                                     <li><a href="vendor-details-tabbed.html">Vendor Tabbed</a></li>
                                     <li><a href="vendor-profile.html">Vendor Profile</a></li>
                                 </ul> -->
-                            <li> <a href="{% url 'newbooking' %}">New Bookings</a>
-                            </li>
-                            <li class="dropdown"><a href="#" title="Home" class="animsition-link">Suppliers</a>
-                                <ul>
-                                    <li><a href="viewvenues">VENUE LIST</a></li>
-                                    <li><a href="viewdecorations">DECORATION LIST</a></li>
-                                    <li><a href="viewcateringes">CATERING LIST</a></li>
-                                    <li><a href="viewpackages">PACKAGE LIST</a></li>
-                                    <!-- <li><a href="photography-listing.html">PHOTOGRAPHY LIST</a></li>
+                        <li> <a href="{% url 'newbooking' %}">New Bookings</a>
+                        </li>
+                        <li class="dropdown"><a href="#" title="Home" class="animsition-link">Suppliers</a>
+                            <ul>
+                                <li><a href="viewvenues">VENUE LIST</a></li>
+                                <li><a href="viewdecorations">DECORATION LIST</a></li>
+                                <li><a href="viewcateringes">CATERING LIST</a></li>
+                                <li><a href="viewpackages">PACKAGE LIST</a></li>
+                                
+                                <!-- <li><a href="photography-listing.html">PHOTOGRAPHY LIST</a></li>
                                     <li><a href="dresses-listing.html">DRESSES LIST</a></li>
                                     <li><a href="florist-listing.html">FLORIST LIST</a></li>
                                     <li><a href="videography-listing.html">VIDEOGRAPHY LIST</a></li>
                                     <li><a href="cake-listing.html">Cake List</a></li>
                                     <li><a href="music-listing.html">Music List</a></li> -->
-                                </ul>
-                            </li>
-                            <li><a href="userfeedback" title="Home" class="animsition-link">Feed Back</a></li>
-                            <li><a href="#" title="Home" class="animsition-link">Contact Us</a></li>
-                            {% if  request.session.username %}
-                            <li><a href="logout" title="Home" class="animsition-link">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="userfeedback" title="userfeedback" class="animsition-link">Feed Back</a></li>
+                        <li><a href="contactus" title="contactus" class="animsition-link">Contact Us</a></li>
+                        {% if  request.session.username %}
+                        <li><a href="mybooking">MY BOOKING</a></li>
+                        <li><a href="logout" title="logout" class="animsition-link">Logout</a></li>
+                        {% else %}
+                        <li><a href="userLogin" title="userLogin" class="animsition-link">Login</a></li>
 
-                            {% else %}
-                            <li><a href="userLogin" title="Home" class="animsition-link">Login</a></li>
-
-                            {% endif %}
-                            <!-- <li><a href="#">Planning Tools</a>
+                        {% endif %}
+                        <!-- <li><a href="#">Planning Tools</a>
                                 <ul>
                                     <li><a href="planning-to-do.html">To Do List</a></li>
                                     <li><a href="planning-budget.html">Budget Planner</a></li>
@@ -104,9 +105,9 @@
                                     <li><a href="real-wedding-single.html">Real Wedding Single</a></li>
                                 </ul>
                             </li> -->
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
