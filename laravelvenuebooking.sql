@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2020 at 07:51 PM
+-- Generation Time: Nov 29, 2020 at 03:49 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -169,7 +169,91 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (105, 'Can add feedback', 27, 'add_feedback'),
 (106, 'Can change feedback', 27, 'change_feedback'),
 (107, 'Can delete feedback', 27, 'delete_feedback'),
-(108, 'Can view feedback', 27, 'view_feedback');
+(108, 'Can view feedback', 27, 'view_feedback'),
+(109, 'Can add auth group', 28, 'add_authgroup'),
+(110, 'Can change auth group', 28, 'change_authgroup'),
+(111, 'Can delete auth group', 28, 'delete_authgroup'),
+(112, 'Can view auth group', 28, 'view_authgroup'),
+(113, 'Can add auth group permissions', 29, 'add_authgrouppermissions'),
+(114, 'Can change auth group permissions', 29, 'change_authgrouppermissions'),
+(115, 'Can delete auth group permissions', 29, 'delete_authgrouppermissions'),
+(116, 'Can view auth group permissions', 29, 'view_authgrouppermissions'),
+(117, 'Can add auth permission', 30, 'add_authpermission'),
+(118, 'Can change auth permission', 30, 'change_authpermission'),
+(119, 'Can delete auth permission', 30, 'delete_authpermission'),
+(120, 'Can view auth permission', 30, 'view_authpermission'),
+(121, 'Can add auth user', 31, 'add_authuser'),
+(122, 'Can change auth user', 31, 'change_authuser'),
+(123, 'Can delete auth user', 31, 'delete_authuser'),
+(124, 'Can view auth user', 31, 'view_authuser'),
+(125, 'Can add auth user groups', 32, 'add_authusergroups'),
+(126, 'Can change auth user groups', 32, 'change_authusergroups'),
+(127, 'Can delete auth user groups', 32, 'delete_authusergroups'),
+(128, 'Can view auth user groups', 32, 'view_authusergroups'),
+(129, 'Can add auth user user permissions', 33, 'add_authuseruserpermissions'),
+(130, 'Can change auth user user permissions', 33, 'change_authuseruserpermissions'),
+(131, 'Can delete auth user user permissions', 33, 'delete_authuseruserpermissions'),
+(132, 'Can view auth user user permissions', 33, 'view_authuseruserpermissions'),
+(133, 'Can add bookings', 34, 'add_bookings'),
+(134, 'Can change bookings', 34, 'change_bookings'),
+(135, 'Can delete bookings', 34, 'delete_bookings'),
+(136, 'Can view bookings', 34, 'view_bookings'),
+(137, 'Can add cateringes', 35, 'add_cateringes'),
+(138, 'Can change cateringes', 35, 'change_cateringes'),
+(139, 'Can delete cateringes', 35, 'delete_cateringes'),
+(140, 'Can view cateringes', 35, 'view_cateringes'),
+(141, 'Can add contects', 36, 'add_contects'),
+(142, 'Can change contects', 36, 'change_contects'),
+(143, 'Can delete contects', 36, 'delete_contects'),
+(144, 'Can view contects', 36, 'view_contects'),
+(145, 'Can add decorations', 37, 'add_decorations'),
+(146, 'Can change decorations', 37, 'change_decorations'),
+(147, 'Can delete decorations', 37, 'delete_decorations'),
+(148, 'Can view decorations', 37, 'view_decorations'),
+(149, 'Can add django admin log', 38, 'add_djangoadminlog'),
+(150, 'Can change django admin log', 38, 'change_djangoadminlog'),
+(151, 'Can delete django admin log', 38, 'delete_djangoadminlog'),
+(152, 'Can view django admin log', 38, 'view_djangoadminlog'),
+(153, 'Can add django content type', 39, 'add_djangocontenttype'),
+(154, 'Can change django content type', 39, 'change_djangocontenttype'),
+(155, 'Can delete django content type', 39, 'delete_djangocontenttype'),
+(156, 'Can view django content type', 39, 'view_djangocontenttype'),
+(157, 'Can add django migrations', 40, 'add_djangomigrations'),
+(158, 'Can change django migrations', 40, 'change_djangomigrations'),
+(159, 'Can delete django migrations', 40, 'delete_djangomigrations'),
+(160, 'Can view django migrations', 40, 'view_djangomigrations'),
+(161, 'Can add django session', 41, 'add_djangosession'),
+(162, 'Can change django session', 41, 'change_djangosession'),
+(163, 'Can delete django session', 41, 'delete_djangosession'),
+(164, 'Can view django session', 41, 'view_djangosession'),
+(165, 'Can add feedbacks', 42, 'add_feedbacks'),
+(166, 'Can change feedbacks', 42, 'change_feedbacks'),
+(167, 'Can delete feedbacks', 42, 'delete_feedbacks'),
+(168, 'Can view feedbacks', 42, 'view_feedbacks'),
+(169, 'Can add migrations', 43, 'add_migrations'),
+(170, 'Can change migrations', 43, 'change_migrations'),
+(171, 'Can delete migrations', 43, 'delete_migrations'),
+(172, 'Can view migrations', 43, 'view_migrations'),
+(173, 'Can add packages', 44, 'add_packages'),
+(174, 'Can change packages', 44, 'change_packages'),
+(175, 'Can delete packages', 44, 'delete_packages'),
+(176, 'Can view packages', 44, 'view_packages'),
+(177, 'Can add password resets', 45, 'add_passwordresets'),
+(178, 'Can change password resets', 45, 'change_passwordresets'),
+(179, 'Can delete password resets', 45, 'delete_passwordresets'),
+(180, 'Can view password resets', 45, 'view_passwordresets'),
+(181, 'Can add payments', 46, 'add_payments'),
+(182, 'Can change payments', 46, 'change_payments'),
+(183, 'Can delete payments', 46, 'delete_payments'),
+(184, 'Can view payments', 46, 'view_payments'),
+(185, 'Can add users', 47, 'add_users'),
+(186, 'Can change users', 47, 'change_users'),
+(187, 'Can delete users', 47, 'delete_users'),
+(188, 'Can view users', 47, 'view_users'),
+(189, 'Can add venues', 48, 'add_venues'),
+(190, 'Can change venues', 48, 'change_venues'),
+(191, 'Can delete venues', 48, 'delete_venues'),
+(192, 'Can view venues', 48, 'view_venues');
 
 -- --------------------------------------------------------
 
@@ -241,8 +325,9 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `user_id`, `venue_id`, `package_id`, `booking_cost`, `decoration_id`, `cateringes_id`, `date`, `time_slot`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 4, 1, 3, 20000, 8, 7, '2020-10-02', '14:22:00', NULL, '2020-10-01 20:56:40', '2020-10-01 23:39:49'),
-(4, 4, 2, 10, 20000, 9, 7, '2020-10-08', '17:14:00', NULL, '2020-10-01 22:44:05', '2020-10-01 22:44:05');
+(1, 4, 1, 3, 4, 8, 7, '2020-11-26', '20:10:00', NULL, '2020-10-01 20:56:40', '2020-10-01 23:39:49'),
+(4, 4, 2, 10, 20000, 9, 7, '2020-10-08', '17:14:00', NULL, '2020-10-01 22:44:05', '2020-10-01 22:44:05'),
+(10, 6, 1, 3, 500, 8, 1, '2020-11-30', '22:47:00', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -265,10 +350,29 @@ CREATE TABLE `cateringes` (
 --
 
 INSERT INTO `cateringes` (`id`, `service`, `catering_type`, `price`, `remember_token`, `created_at`, `updated_at`) VALUES
-(10, 'jeel', 'UPDATE', 8, NULL, '2020-10-04 12:41:24', '2020-10-05 12:41:24'),
-(11, 'test 2', 'test', 555, NULL, '2020-10-04 12:41:24', '2020-10-05 12:41:24'),
-(13, ' abcd', 'abcd', 500, NULL, NULL, NULL),
-(17, 'test', 'test', 50, NULL, NULL, NULL);
+(13, 'Amdabad', 'Gujarati', 500, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contects`
+--
+
+CREATE TABLE `contects` (
+  `id` int(11) NOT NULL,
+  `fname` text NOT NULL,
+  `lname` text NOT NULL,
+  `email` text NOT NULL,
+  `number` text NOT NULL,
+  `msg` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contects`
+--
+
+INSERT INTO `contects` (`id`, `fname`, `lname`, `email`, `number`, `msg`) VALUES
+(2, 'jeel', 'faldu', 'jeel@mail.com', '123456789', 'msg msg');
 
 -- --------------------------------------------------------
 
@@ -290,7 +394,7 @@ CREATE TABLE `decorations` (
 --
 
 INSERT INTO `decorations` (`id`, `decoration_type`, `price`, `remember_token`, `created_at`, `updated_at`) VALUES
-(8, 'Simple(include:-chair,green carpet,decorations of flowers and lights of choice)', 15000, NULL, '2020-09-16 04:30:02', '2020-09-17 08:57:40'),
+(8, ' Simple(include:-decorations of flowers and lights of choice)  ', 1500, NULL, '2020-09-16 04:30:02', '2020-09-17 08:57:40'),
 (9, 'sraugdihiook;l;dkjokjl', 8000, NULL, '2020-09-16 05:50:52', '2020-09-17 08:53:00');
 
 -- --------------------------------------------------------
@@ -333,6 +437,27 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (13, 'auth', 'user'),
 (14, 'contenttypes', 'contenttype'),
 (15, 'sessions', 'session'),
+(28, 'users', 'authgroup'),
+(29, 'users', 'authgrouppermissions'),
+(30, 'users', 'authpermission'),
+(31, 'users', 'authuser'),
+(32, 'users', 'authusergroups'),
+(33, 'users', 'authuseruserpermissions'),
+(34, 'users', 'bookings'),
+(35, 'users', 'cateringes'),
+(36, 'users', 'contects'),
+(37, 'users', 'decorations'),
+(38, 'users', 'djangoadminlog'),
+(39, 'users', 'djangocontenttype'),
+(40, 'users', 'djangomigrations'),
+(41, 'users', 'djangosession'),
+(42, 'users', 'feedbacks'),
+(43, 'users', 'migrations'),
+(44, 'users', 'packages'),
+(45, 'users', 'passwordresets'),
+(46, 'users', 'payments'),
+(47, 'users', 'users'),
+(48, 'users', 'venues'),
 (16, 'venueboking', 'authgroup'),
 (17, 'venueboking', 'authgrouppermissions'),
 (18, 'venueboking', 'authpermission'),
@@ -393,7 +518,9 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (18, 'sessions', '0001_initial', '2020-10-04 09:54:01.043672'),
 (19, 'venueboking', '0001_initial', '2020-10-04 09:54:01.082062'),
 (20, 'venueboking', '0002_auto_20201008_1004', '2020-10-08 04:34:43.147048'),
-(21, 'venueboking', '0003_auto_20201008_1021', '2020-10-08 04:51:07.601004');
+(21, 'venueboking', '0003_auto_20201008_1021', '2020-10-08 04:51:07.601004'),
+(22, 'users', '0001_initial', '2020-11-29 11:16:53.161728'),
+(23, 'venueboking', '0004_auto_20201129_1646', '2020-11-29 11:16:53.174776');
 
 -- --------------------------------------------------------
 
@@ -412,7 +539,9 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
-('ysaccrvj5chvbu33iqs6omlgu40oizqu', 'eyJhZG1pbl91c2VybmFtZSI6ImplZWxmYWxkdUBnbWFpbC5jb20ifQ:1kQwEl:n1cZPAUGcKImgEaoVILAZwuVxBfU5bxyh-NUiQK6HIY', '2020-10-23 17:31:23.145653');
+('nvs9zm4o9j2zdxv0xqvsoksvs14jq4e9', 'eyJhZG1pbl91c2VybmFtZSI6ImplZWwifQ:1kWCPd:o4wPw4F3mldJwpqUUM5OxZhWhC-T9I7BlKSVikpcS0s', '2020-11-07 05:48:21.500211'),
+('v253vcu0h3pxdc19z2kqfswl3spw1f2d', '.eJyrVkpMyc3Miy8tTi3KS8xNVbJSykpNzVHSUUISSUvMSSkFCTuk5yZm5ugl5-cCFWSmKFmZ1QIA_q0WgQ:1kjNgZ:GB8K8pXZUSEWi0y5rIDUzqJV7ZFznI1LMBC1mDCv49w', '2020-12-13 14:28:19.712142'),
+('ysaccrvj5chvbu33iqs6omlgu40oizqu', 'eyJhZG1pbl91c2VybmFtZSI6ImplZWxmYWxkdUBnbWFpbC5jb20ifQ:1kVRB9:5gzmsM9mmygQw0Iis67xmhl4WBpjRRVFhIIuHSyvqNI', '2020-11-05 03:22:15.049866');
 
 -- --------------------------------------------------------
 
@@ -436,7 +565,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `user_id`, `venue_id`, `feedback_details`, `date`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 4, 2, 'nice place good facilty and location', '2020-10-01', NULL, '2020-10-01 03:21:03', '2020-10-01 05:48:54');
+(5, 6, 1, 'ewrwerwwre', '2020-11-20', NULL, NULL, NULL),
+(6, 6, 1, 'Very Good', '2020-11-23', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -540,7 +670,10 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`id`, `user_id`, `total_amount`, `amount_paid`, `status`, `date`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 4, 500000, 200000, 'half payment', '2020-09-30 12:29:32', NULL, '2020-09-30 06:59:32', '2020-09-30 06:59:32');
+(4, 6, 217000, 217000, 'Half payment', '2020-11-29 10:45:41', NULL, NULL, NULL),
+(5, 6, 217000, 200, 'Half payment', '2020-11-29 12:04:46', NULL, NULL, NULL),
+(6, 6, 217000, 5000, 'Half payment', '2020-11-29 12:12:24', NULL, NULL, NULL),
+(7, 6, 217000, 879798, 'Half payment', '2020-11-29 13:00:54', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -568,7 +701,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `is
 (1, 'Shah Vrushti', 'shahvrushti2701@gmail.com', NULL, '$2y$10$UrsNG9mT4gvS6WWHyf0mu.7zQ6q.9jm/J.66PmsBYEuL4C9vV.TzS', 1, NULL, '2020-09-09 02:34:54', '2020-09-15 13:08:53'),
 (2, 'John Smith', 'john@yahoo.com', NULL, '$2y$10$N2azqkJp2p/oYRh6j8ImLu5r84sJX6UOWk7L4tVbDF2TREziaR7oy', NULL, NULL, '2020-09-09 03:29:59', '2020-09-09 03:29:59'),
 (4, 'AneriSoni', 'anerisoni98@gmail.com', NULL, '$2y$10$pDpXJKltscdJ6F7U7j9y6OAU..f/qKa4WaukOi0exc2ImVWy.ytRC', NULL, NULL, '2020-09-29 08:37:53', '2020-09-29 08:37:53'),
-(5, 'jeel', 'jeelfaldu@gmail.com', '0000-00-00 00:00:00', 'jeel6809', 1, NULL, NULL, NULL);
+(5, 'jeel', 'jeel', '0000-00-00 00:00:00', '123456', 1, NULL, NULL, NULL),
+(6, 'jeel faldu', 'faldujeel@gmail.com', NULL, 'jeel6809', NULL, NULL, '2020-10-18 14:45:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -593,7 +727,8 @@ CREATE TABLE `venues` (
 
 INSERT INTO `venues` (`id`, `venue_name`, `address`, `price`, `capacity_of_people`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Grand Bhagwati', 'S.G. Road, NH 8C, opp. Gurudhwara, Bodakdev, Ahmedabad, Gujarat 380054', '2,00,000', 750, NULL, '2020-09-11 05:15:07', '2020-09-14 04:04:48'),
-(2, 'Hayatt Banqueit', 'Plot 216, Town Plan Scheme 1, near Vastrapur Lake, Vastrapur, Ahmedabad, Gujarat 380015', '20,00,000', 1000, NULL, '2020-09-11 05:16:01', '2020-09-11 05:16:01');
+(2, 'Hayatt Banqueit', 'Plot 216, Town Plan Scheme 1, near Vastrapur Lake, Vastrapur, Ahmedabad, Gujarat 380015', '2000', 1000, NULL, '2020-09-11 05:16:01', '2020-09-11 05:16:01'),
+(20, 'test', 'addd', '588', 84, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -659,6 +794,12 @@ ALTER TABLE `bookings`
 -- Indexes for table `cateringes`
 --
 ALTER TABLE `cateringes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contects`
+--
+ALTER TABLE `contects`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -762,7 +903,7 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 
 --
 -- AUTO_INCREMENT for table `auth_user`
@@ -786,13 +927,19 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `cateringes`
 --
 ALTER TABLE `cateringes`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `contects`
+--
+ALTER TABLE `contects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `decorations`
@@ -810,19 +957,19 @@ ALTER TABLE `django_admin_log`
 -- AUTO_INCREMENT for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -840,19 +987,19 @@ ALTER TABLE `packages`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `venues`
 --
 ALTER TABLE `venues`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
