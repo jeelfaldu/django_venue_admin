@@ -34,6 +34,7 @@ urlpatterns = [
     path('payment.html', views.payment, name='payment'),
     path('feedback.html', views.feedback, name='feedback'),
     path('booking', views.booking, name='booking'),
+    path('contact', views.contact, name='contact'),
 
     ############################
     path('addcateringes.html', views.addcateringes, name='addcateringes'),

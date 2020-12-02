@@ -349,3 +349,7 @@ def editdata(request, did, slug):
     #     delete=Cateringes.objects.get(id=did)
     #     delete.delete()
     return render(request, "index.html")
+
+
+def contact(request):
+    return render(request, "contact.html")
