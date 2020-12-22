@@ -263,7 +263,7 @@ def mybooking(request):
 def send_email(request, otp, email):
     subject = request.POST.get('subject', 'OTP FOR PASSWORD RESET')
     message = request.POST.get('message', "OTP ID : " + str(otp))
-    from_email = request.POST.get('from_email', 'faldujeel@gmail.com')
+    from_email = request.POST.get('from_email', 'YOU MAIL ID')
     if subject and message and from_email:
         try:
             send_mail(subject, message, from_email, [email])
